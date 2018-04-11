@@ -1,0 +1,181 @@
+%==============================================================================
+% Casus onderzoeksproces: Database-performantie
+%==============================================================================
+% Gebaseerd op LaTeX-sjabloon ‘Stylish Article’ (zie voorstel.cls)
+% Auteur: Jens Buysse, Bert Van Vreckem
+
+\documentclass[fleqn,10pt]{voorstel}
+
+%------------------------------------------------------------------------------
+% Metadata over het artikel
+%------------------------------------------------------------------------------
+
+\JournalInfo{HoGent Bedrijf en Organisatie} % Journal information
+\Archive{Onderzoekstechnieken 2017 - 2018 (Afstandsleren)} % Additional notes (e.g. copyright, DOI, review/research article)
+
+%---------- Titel & auteur ----------------------------------------------------
+
+\PaperTitle{Analyse van een dataset}
+\PaperType{Casus onderzoeksproces} % Type document
+
+\Authors{Jens Buysse\textsuperscript{1}, Wim De Bruyn\textsuperscript{2}, Wim Goedertier\textsuperscript{3}, Bert Van Vreckem\textsuperscript{4}} % Authors
+\affiliation{\textbf{Contact:}
+  \textsuperscript{1} \href{mailto:jens.buysse@hogent.be}{jens.buysse@hogent.be};
+  \textsuperscript{2} \href{mailto:wim.debruyn@hogent.be}{wim.debruyn@hogent.be};
+  \textsuperscript{3} \href{mailto:wim.goedertier@hogent.be}{wim.goedertier@hogent.be};
+  \textsuperscript{4} \href{mailto:bert.vanvreckem@hogent.be}{bert.vanvreckem@hogent.be}}
+
+%---------- Abstract ----------------------------------------------------------
+
+\Abstract{ Aan de hand van een concrete casus, meer bepaald het analyseren van een aangereikte dataset, wordt een typisch onderzoeksproces doorlopen. Studenten gaan op verkenning in de dataset en formuleren op basis daarvan een onderzoeksvraag. Aan de hand van een literatuurstudie vormen ze zich vervolgens een beeld gevormd van de stand van zaken over het onderwerp. Ook wordt de onderzoeksvraag verder gespecificeerd en meetbaar gemaakt. Daarna voeren ze een statistische analyse uit op de database op een methodologisch correcte manier. Uit de resultaten wordt een conclusie getrokken en een antwoord geformuleerd op de onderzoeksvraag. Tenslotte wordt het gehele verloop samengevat in een artikel opgemaakt in {\LaTeX} volgens een aangereikt sjabloon. }
+
+%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
+
+\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
+\Keywords{Onderzoeksproces, statistische analyse, reproduceerbaarheid} % Keywords
+
+%---------- Titel, inhoud -----------------------------------------------------
+
+\begin{document}
+
+%\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%------------------------------------------------------------------------------
+% Hoofdtekst
+%------------------------------------------------------------------------------
+
+%---------- Inleiding ---------------------------------------------------------
+
+\section{Doelstelling}
+
+De doelstelling van deze opdracht is om een mini-onderzoek uit te voeren zoals dat in de praktijk typisch zou moeten verlopen. Bij deze opdracht is een dataset gevoegd die als startpunt kan dienen: de ruwe resultaten van een bevraging uitgevoerd door StackOverflow in 2016\footnote{de dataset is beschikbaar in je eigen ozt-tile-\emph{username} repo op GitHub onder de directory ``data/''}.
+
+Studenten die zelf een dataset willen voorstellen kunnen dat, maar letten er best op dat die geschikt is voor deze opdracht. Een goede dataset is voldoende groot (duizenden records), heeft een mix van kwantitatieve en kwalitatieve variabelen en laat toe om verbanden te zoeken tussen variabelen. Bij voorkeur is de inhoud van de dataset ict-gerelateerd, zodat je gebruik kan maken van de specifieke tips voor het zoeken naar geschikte bronnen~\autocite{VanVreckem2017}. Doe tijdig een voorstel naar je begeleider toe om zeker te zijn dat de dataset geschikt is.
+
+%---------- Stand van zaken ---------------------------------------------------
+
+\section{Verkennen van de dataset}
+
+Een eerste stap van het onderzoek is een initiële verkenning van de dataset. Welke variabelen zijn er, wat betekenen ze, onder welke meetniveaus\footnote{nominaal, ordinaal, interval, ratio, \ldots (zie cursus of Wikipedia)} kan je ze classificeren?
+
+Op basis daarvan formuleer je één onderzoeksvraag waarvan je verwacht dat die op basis van de dataset kan beantwoord worden. Een voorbeeld kan zijn ``Is er sprake van gender-ongelijkheid in de informatica-sector?''
+Het is toegelaten om dit voorbeeld te gebruiken als onderzoeksvraag,
+maar zélf een andere onderzoeksvraag formuleren is uiteraard nog beter.
+
+Op basis van de onderzoeksvraag probeer je de informatiebehoefte te bepalen, of anders gezegd probeer je de onderzoeksvraag te herformuleren in \emph{meetbare} termen. Van welke factoren zou je kunnen afleiden dat er bijvoorbeeld gender-ongelijkheid is?
+
+Schrijf een \emph{inleiding} voor je artikel waarin de context van het onderzoek besproken wordt en waarin je motiveert waarom deze onderzoeksvraag de moeite waard is om een antwoord op te zoeken. Ook de deelonderzoeksvragen worden hier toegelicht.
+
+Deliverables voor deze fase:
+
+\begin{itemize}
+  \item De centrale onderzoeksvraag;
+  \item Meetbare indicatoren waarmee de onderzoeksvraag op basis van de inhoud van de dataset kan beantwoord worden;
+  \item Inleiding van het artikel.
+\end{itemize}
+
+\section{Literatuuronderzoek}
+
+Een volgende stap is om een literatuuronderzoek uit te voeren op basis van je gekozen onderzoeksvraag. Om het voorbeeld te volgen, zou je dus kunnen gaan opzoeken of er al onderzoek gedaan is naar gender-ongelijkheid in de informatica-sector (of in het algemeen).
+
+Je zoekt minstens 3 bronnen.
+Meer is uiteraard beter, zo krijg je een beter inzicht in het onderwerp.
+Onderwerp je bronnen aan de ``CRAP-test''~\autocite{Gratz2015}
+en maak een overzicht van de gevonden bronnen met JabRef.
+Lees je bronnen en schrijf in eigen woorden, in één of twee zinnen, wat erin staat. Noteer ook de belangrijkste conclusie(s).
+
+Bespreek \emph{minstens} één van je artikels kritisch. Wat vind je in het algemeen van het artikel? Vind je het interessantst en waarom? Is het artikel relevant voor jouw onderzoeksvraag? Wat vind je van de rapportering van de resultaten door de auteur? Zou je het onderzoek op basis van de inhoud van het artikel kunnen reproduceren? Kan je afleiden uit het artikel of correcte statistische methoden gebruikt zijn?
+
+Verwerk daarna de samenvattingen van de artikels en de kritische beschouwing ervan in een doorlopende tekst. Dit wordt een onderdeel van je artikel (state of the art/kritische literatuurstudie).
+Hanteer hierbij een wetenschappelijke schrijfstijl.
+~\autocite{Taalwinkel2014}.
+De schrijfstijl van de gelezen artikels zijn vermoedelijk een goed voorbeeld, maar raadpleg zeker ook de tips op \textcite{Taalwinkel2014}.
+
+Deliverables voor deze fase:
+
+\begin{itemize}
+  \item Bibliografische databank met minstens drie bronnen (maar bij voorkeur meer);
+  \item Korte samenvatting en conclusie(s) van ieder artikel (ofwel in Jabref in de daarvoor bestemde invoervakken, ofwel in een apart Markdown-document);
+  \item Kritische beschouwing van minstens één artikel;
+  \item Tekst kritische literatuurstudie.
+\end{itemize}
+
+\section{Analyse dataset}
+
+De volgende stap is het analyseren van de dataset met R. Bekijk opnieuw de artikels die je geselecteerd hebt tijdens de literaturstudie. Zijn de resultaten goed gerapporteerd? Is de data duidelijk gevisualiseerd Is het duidelijk of eventuele verschillen in uitkomsten ook statistisch significant zijn? Probeer het zelf minstens even goed te doen, of beter!
+
+De specifieke methoden die je zal gebruiken om de dataset te analyseren hangen enerzijds af van de onderzoeksvraag, en anderzijds van de meetniveaus van de relevante variabelen. De uitdaging van deze opdracht is net om de meest geschikte methode toe te passen.
+
+Zaken die zeker aan bod moeten komen in de analyse:
+
+\begin{itemize}
+  \item Individuele bespreking van de relevante variabelen (zie cursushoofdstuk ``Analyse op 1 variabele'')
+  \item Bepaling of de steekproef representatief is, op basis van enkele eigenschappen. Bijvoorbeeld: komt de verdeling over de variabele gender overeen met die van de informatica-sector in het algemeen? Voor dat laatste moet je natuurlijk wel weten wat die verdeling is, en dat zou je uit de vakliteratuur moeten kunnen opmaken. Zijn er bepaalde groepen over- of ondervertegenwoordigd?
+  \item Leg verbanden tussen variabelen, en gebruik geschikte methoden (bv. statistische toetsen) om dit te bepalen (zie cursushoofdstukken ``Analyse op 2 variabelen'', ``Toetsingsprocedures'' en de ``$\chi^2$-toets''). Zijn de resultaten statistisch significant?
+\end{itemize}
+
+Visualiseer de resultaten van de experimenten met een geschikte grafiek voor het meetniveau van de variabelen. Bij kwantitatieve variabelen is het belangrijk dat ook de \emph{spreiding} van de datapunten zichtbaar is. Toon in geen geval enkel gemiddelden.
+
+Vat de resultaten samen in een doorlopende tekst die onderdeel wordt van je artikel. Voeg de belangrijkste, duidelijkste en/of interessantste resultaten toe in de vorm van tabellen of grafieken.
+
+Deliverables voor deze fase:
+
+\begin{itemize}
+  \item R-broncode voor het analyseren van de resultaten;
+  \item Tabellen en grafieken voor alle resultaten van de analyses;
+  \item Doorlopende tekst met bespreking van de resultaten.
+\end{itemize}
+
+\section{Rapportering}
+
+Werk tenslotte het artikel af waarin de resultaten worden besproken. De belangrijkste onderdelen zijn op dit punt in principe al geschreven, maar kunnen ongetwijfeld nog bijgeschaafd worden.
+
+Formuleer de belangrijkste \emph{conclusies} van het onderzoek en eventuele kritische bedenkingen daarbij. Wat zouden eventuele volgende stappen kunnen zijn als je het onderzoek zoud verder zetten? Wat ontbrak er bijvoorbeeld om een sluitend antwoord te bieden op de onderzoeksvraag en hoe zou een toekomstige herhaling of uitbreiding moeten aangepakt worden? Welke nieuwe onderzoeksvragen zijn bij je opgekomen bij het voeren van dit onderzoek?
+
+Schrijf als laatste een \emph{samenvatting} (abstract) waarin alle verwachte componenten (context, nood, taak, object, resultaat, conclusie en perspectief) aanwezig zijn.
+
+Formuleer een \emph{titel} zodat die een concreet beeld geeft van het gevoerde onderzoek en de onderzoeksvraag.
+
+De tekst staat geheel op zichzelf, d.w.z.~er wordt niet verondersteld dat de lezer bepaalde voorkennis heeft. De lezer moet alle informatie krijgen om de tekst te begrijpen. Het artikel is duidelijk en logisch gestructureerd en is vlot leesbaar, waarbij elk onderdeel mooi op elkaar aansluit. De gehele tekst is geschreven in een wetenschappelijke schrijfstijl~\autocite{Taalwinkel2014}.
+
+Probeer de stijl van de gelezen werken (vooral uit academische literatuur) na te bootsen. Heb ook aandacht voor reproduceerbaarheid. Het artikel moet voldoende uitleg bevatten zodat iemand anders jouw stappen onafhankelijk kan herhalen. Alle beweringen die je doet in het artikel zijn aantoonbaar, hetzij door de zelf bekomen resultaten, hetzij door verwijzing naar gezaghebbende bronnen.
+
+Deliverables voor deze fase:
+
+\begin{itemize}
+  \item Het afgewerkte artikel: broncode op Github, PDF vóór de deadline ingediend via Chamilo.
+\end{itemize}
+
+\section{Richtlijn tijdpad}
+
+Om deze casus met succes te voltooien, is het belangrijk om zo snel mogelijk aan de slag te gaan, en er voldoende tijd aan te spenderen. Elke week een  Hieronder volgt een aanbeveling, het is aan jullie om die al dan niet te volgen.
+
+\begin{description}
+  \item[W5] Eerste verkenning dataset (of opzoeken alternatieve dataset en voorleggen aan de begeleider), formuleren onderzoeksvraag;
+  \item[W6-7] Literatuurstudie
+  \item[W8-10] (incl. paasvakantie) Statistische analyse dataset, visualisatie;
+  \item[W11-12] Redactie artikel: inleiding, conclusies, discussie, samenvatting;
+  \item[W13] Indienen.
+\end{description}
+
+\section{Praktische afspraken}
+
+Dit is een individuele opdracht. Studenten krijgen een private Github-repository waarin alle resultaten van dit onderzoek bijgehouden worden: bibliografische databank, nota's, de onderzochte dataset, R code voor statistische verwerking van deze data, {\LaTeX} broncode van het artikel, enz.
+
+Voor een leidraad in het voeren van een literatuuronderzoek, het gebruik van een bibliografische databank, gebruik van \LaTeX{}, zie de cursus en ook~\autocite{VanVreckem2017}.
+
+Het finale artikel wordt ingediend op Chamilo onder ``Opdrachten,'' ten laatste op vrijdag 25 mei 2018 om 23:59. De deadline is \textbf{strikt}. Na verlopen van de deadline is het niet meer mogelijk nog in te dienen.
+
+Het resultaat wordt beoordeeld naargelang het voldoet aan de hierboven opgesomde richtlijnen. Het resultaat voor deze casus telt mee voor 30\% van het examencijfer voor dit opleidingsonderdeel of 6/20. Merk op dat voor deze opdracht geen tweede examenkans voorzien is en dat dit resultaat dus ongewijzigd wordt overgenomen in de tweede zittijd. Het is dus belangrijk om de nodige inspanning te leveren!
+
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+
+\phantomsection
+\printbibliography[heading=bibintoc]
+
+\end{document}

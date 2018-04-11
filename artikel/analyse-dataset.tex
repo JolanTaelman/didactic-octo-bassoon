@@ -1,0 +1,86 @@
+%==============================================================================
+% Casus onderzoeksproces: Analyse van een dataset
+%==============================================================================
+% Gebaseerd op LaTeX-sjabloon ‘Stylish Article’ (zie artikeltin.cls)
+% Auteur: Jens Buysse, Bert Van Vreckem
+%
+% Typische werkwijze bij compileren in TeXStudio
+% F5 (compileren) + F8 (bibliografie voorbereiden) + F5 (compileren met
+% bibliografie)
+
+\documentclass[fleqn,10pt]{artikeltin}
+
+%------------------------------------------------------------------------------
+% Metadata over het artikel
+%------------------------------------------------------------------------------
+
+\JournalInfo{HoGent Bedrijf en Organisatie} % Journal information
+\Archive{Onderzoekstechnieken 2016 - 2017} % Additional notes (e.g. copyright, DOI, review/research article)
+
+%---------- Titel & auteur ----------------------------------------------------
+
+% TODO: pas de titel aan, zorg dat die de onderzoeksdoelstelling reflecteert.
+\PaperTitle{Analyse van een dataset}
+\PaperType{Casus onderzoeksproces} % Type document
+
+% TODO: Vul je naam en emailadres in
+\Authors{Voornaam Naam\textsuperscript{1}} % Author(s)
+\affiliation{\textbf{Contact:}
+  \textsuperscript{1} \href{mailto:voornaam.naam@student.hogent.be}{voornaam.naam@student.hogent.be}}
+
+%---------- Abstract ----------------------------------------------------------
+
+\Abstract{ Hier komt de samenvatting van het artikel, als een doorlopende tekst van één paragraaf. Schrijf dit pas helemaal op het einde, als de inhoud al op punt staat. Volgende elementen moeten hier zeker in vermeld worden: de \textbf{context} (waarom is dit werk belangrijk?), de \textbf{nood} (waarom moet dit onderzocht worden?), de \textbf{taak} (wat is er precies uitgevoerd waarover in dit artikel gerapporteerd wordt?), het \textbf{object} (wat staat in dit document geschreven?), het \textbf{resultaat}, de belangrijkste \textbf{conclusie} en \textbf{perspectief} (welk vervolgonderzoek zou er hierna kunnen uitgevoerd worden?). }
+
+%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
+
+\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
+% TODO: vul sleutelwoorden aan die te maken hebben met het onderwerp van het artikel.
+\Keywords{} % Keywords
+
+%---------- Titel, inhoud -----------------------------------------------------
+\begin{document}
+
+%\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%------------------------------------------------------------------------------
+% Hoofdtekst
+%------------------------------------------------------------------------------
+
+% TODO: Er is al een zekere structuur gegeven hieronder, maar pas dit aan als dat zinvol is (bv. extra secties).
+
+\section{Inleiding} % The \section*{} command stops section numbering
+\label{sec:inleiding}
+
+Beschrijf in deze sectie de context (dit houdt ook literatuuroverzicht in), nood en taak. Hier horen veel literatuurverwijzingen thuis \autocite{VanVreckem2017}.
+
+Een typische laatste zin voor de inleiding is ``De rest van dit artikel is als volgt gestructureerd: Sectie~\ref{sec:methodologie} beschrijft de gevolgde methodologie, Sectie [...]''
+
+\section{Methodologie}
+\label{sec:methodologie}
+
+Beschrijf hier in zoveel mogelijk detail op welke manier de dataset is verzameld (ahv de meegegeven beschrijving) en welke methodologie je gevolgd hebt om de onderzoeksvraag/-vragen te beantwoorden. Het moet voor de lezer mogelijk zijn om aan de hand van de beschrijving je resultaten onafhankelijk te valideren.
+
+\section{Resultaten}
+\label{sec:resultaten}
+
+Beschrijf hier de belangrijkste resultaten uit de analyse van de dataset. Voeg ook tabel(len) en figuren toe.
+
+Beschrijf zeker ook de uitkomst van statistische toetsen: zijn de verschillen tussen vergeleken groepen significant?
+
+\section{Conclusie}
+\label{sec:conclusie}
+
+Beschrijf hier de conclusie en eventuele bijkomende onderzoeksvragen die in een verder onderzoek kunnen uitgediept worden
+
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+
+\phantomsection
+\printbibliography[heading=bibintoc]
+
+\end{document}
