@@ -1,8 +1,8 @@
 # Casus onderzoeksproces
 
-- Naam student: STUDENT
-- e-mailadres: <mailto:STUDENT@student.hogent.be>
-- Github gebruikersnaam: <https://github.com/USER>
+- Naam student: JolanTaelman
+- e-mailadres: <mailto:jolan.taelman.v4987@student.hogent.be>
+- Github gebruikersnaam: <https://github.com/JolanTaelman>
 
 Gebruik deze repository voor het bijhouden van alle informatie, code en resultaten van je onderzoek. Gebruik [Markdown](https://guides.github.com/features/mastering-markdown/) voor verslagen, procedures, enz. (alle bestanden waar je anders Word voor zou gebruiken). Een sjabloon voor het artikel en een bestand voor de bibliografische databank is ook voorzien.
 
